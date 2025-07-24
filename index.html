@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="gallery-title">My Image Gallery</h1>
+
+    <div class="filter-buttons">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('badposture')">badposture</button>
+  <button onclick="filterImages('goodposture')">goodposture</button>
+  <button onclick="filterImages('comparisonposture')">comparisonposture</button>
+  <button onclick="filterImages('exercise')">exercise for goodposture</button>
+</div>
+
+    <div class="posture">
+     <div class="gallery-item badposture">
+        <img src="badposture1.jpg" onclick="openLightbox(this.src)" alt="badposture1">
+        <img src="badposture2.jpg" onclick="openLightbox(this.src)" alt="badposture2">
+     </div>
+     <div class="gallery-item goodposture">
+        <img src="goodposture1.jpg" onclick="openLightbox(this.src)" alt="goodposture1">
+        <img src="goodposture2.jpg" onclick="openLightbox(this.src)" alt="goodposture2">
+     </div>
+     <div class="gallery-item comparisonposture">
+        <img src="comparisonposture1.jpg" onclick="openLightbox(this.src)" alt="comparisonposture1">
+        <img src="comparisonposture2.jpeg" onclick="openLightbox(this.src)" alt="comparisonposture2">
+     </div>
+     <div class="gallery-item exercise">
+        <img src="exercise.png" onclick="openLightbox(this.src)" alt="exercise">
+        <img src="exercise1.jpg" onclick="openLightbox(this.src)" alt="exercise1">
+        <img src="exercise2.jpeg" onclick="openLightbox(this.src)" alt="exercise2">
+        <img src="exercise3.jpeg" onclick="openLightbox(this.src)" alt="exercise3">
+        <img src="exercise4.webp" onclick="openLightbox(this.src)" alt="exercise4">
+        <img src="exercise5.webp" onclick="openLightbox(this.src)" alt="exercise5">
+        <img src="exercise6.jpeg" onclick="openLightbox(this.src)" alt="exercise6">
+     </div>
+    
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img" class="lightbox-content">
+  <button class="prev-btn" onclick="navigate(-1)">&#10094;</button>
+  <button class="next-btn" onclick="navigate(1)">&#10095;</button>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
